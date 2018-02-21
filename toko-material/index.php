@@ -7,6 +7,6 @@
   		<meta name="author" content="">
 	</head>
 	<body>
-		<h1>ANOTERO.ID</h1>
+		<h1>INI KODINGAN UTK MATRIAL</h1>
 	</body>
 </html>
