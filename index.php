@@ -9,7 +9,6 @@
 	</head>
 	<body>
 		<h1>ANOTERO.ID</h1>
-		<p>asd</p>
-		woyyyyyyy
+		<p> EDIT LAGI BOS </p>
 	</body>
 </html>
