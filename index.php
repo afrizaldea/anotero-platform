@@ -10,5 +10,6 @@
 	<body>
 		<h1>ANOTERO.ID</h1>
 		<p> EDIT LAGI BOS </p>
+		<p> KOK DI EDIT BOS</p>
 	</body>
 </html>
