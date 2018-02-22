@@ -4,6 +4,7 @@
   <head>
 
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -21,7 +22,7 @@
   <body>
 
 		<!-- Navigation -->
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top header-top-bar">
 		  <div class="container">
 			<a class="navbar-brand" href="#">ANOTERO</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,15 +31,15 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 			  <ul class="navbar-nav ml-auto">
 				<li class="nav-item active">
-				  <a class="nav-link" href="#">Home
+				  <a class="nav-link" href="#home">Home
 					<span class="sr-only">(current)</span>
 				  </a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link" href="#">Tentang</a>
+				  <a class="nav-link" href="#about">Tentang</a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link" href="#">Layanan</a>
+				  <a class="nav-link" href="#layanan">Layanan</a>
 				</li>
 				<li class="nav-item">
 				  <a class="nav-link" href="#">Login</a>
@@ -48,12 +49,37 @@
 		  </div>
 		</nav>
 
-		<!-- Page Content -->
+		<section id="home" class="home">
+        	<div class="home_overlay">
+            	<div class="container">
+                	<div class="area">
+                		<h3>PROFESSIONAL APPLICATION SERVICE</h3>
+                        <p>Modern  -  Fast  -  Reliable</p>
+                	</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+        	<div class="container-fluid">
+                <div class="row">
+                	<div class="tentang text-center">
+        				<div class="biru">
+        					<h4>Application Service</h4>
+        					<p>Memberikan berbagai macam aplikasi yang anda butuhkan<p>
+        				</div>
+        				<div class="kuning">
+        					<h4>FREE !</h4>
+        					<p>Semua Aplikasi dapat anda gunakan dengan Gratis<p>
+        				</div>
+        				</div>
+        			</div>
+    			</div>
+    		</div>
+        </section>
+
 		<div class="container">
-
-		  <!-- Page Heading -->
-		  <h1 class="my-4"><center>Anotero Platform</center></h1>
-
+		  <h1 class="my-4"><center>Layanan</center></h1>
 		  <hr>
 
 		  <div class="row">
@@ -155,7 +181,7 @@
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-footer">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; ANOTERO.ID</p>
       </div>

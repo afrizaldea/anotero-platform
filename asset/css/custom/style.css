@@ -14,10 +14,80 @@ body {
   }
 }
 
+.text-center{
+    text-align:center !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+    margin:0 !important;
+}
+
 .portfolio-item {
   margin-bottom: 30px;
 }
 
 .pagination {
   margin-bottom: 30px;
+}
+
+.header-top-bar{
+    background: #202242;
+}
+
+.home{
+    background: url(../../img/large/header.jpg) no-repeat center left;
+    background-size:cover;
+}
+.home_overlay{
+    background:rgba(176, 186, 186, 0.44);
+}
+
+.area {
+	padding: 200px 0px;
+    text-align: center;
+}
+.area h3{
+    color:#202242;
+    font-size:3rem;
+    margin-bottom:40px;
+}
+.area p{
+    font-size:1.875rem;
+    color:#202242;
+    margin-bottom:40px;
+}
+
+.tentang {
+	color:#fff;
+    overflow: hidden;
+}
+.biru {
+	float: left;
+	background: #202242;
+    padding: 150px 0px;
+    min-width: 631px;
+}
+
+.biru h4 {
+	color: #ffe13e;
+	font-size:2rem;
+    margin-bottom:20px;
+}
+
+.kuning {
+	float: left;	
+	background: #ffe13e;
+	padding: 150px 0px;
+	min-width: 631px;
+}
+
+.kuning h4 {
+	color: #202242;
+	font-size:2rem;
+    margin-bottom:20px;
+}
+
+.bg-footer {
+    background: #202242;
 }
