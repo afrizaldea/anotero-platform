@@ -45,7 +45,7 @@ class User_model{
 		return $query;
 	}
 	
-	public function delete($param1)
+	public function _delete($param1)
 	{
 		$sql = "";
 		$query = mysql_query($sql);
