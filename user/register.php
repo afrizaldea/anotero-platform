@@ -1,3 +1,20 @@
+<?php
+
+/*
+############
+ketika form di load, maka tidak masuk ke model secara langsung karena itu bahaya
+maka di include lah si control user sebagai perantara
+############
+*/
+include "../control/User.php";
+$user = new User();
+$user->register();
+
+//proses teknikal selesai
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +25,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Login Anotero</title>
+		<title>Registrasi Anotero</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="../asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -49,29 +66,31 @@
 		</nav>
 		<br/>
 	
-	
 	<!-- form biar ketengah -->
-	<h3 class="jumbrotron" align="center">Masuk ke web apps kami!</h3>
-	<hr/>
-	
 	<div class="row justify-content-center">
-	
-		<form>
+		<form action="" method="POST">
+			<div class="form-group">
+				<label for="nama_perusahaan">Nama Perusahaan</label>
+				<input type="text" class="form-control" id="nama_perusahaan" name="nama_perusahaan">
+			</div>
 			<div class="form-group">
 				<label for="InputEmail1">Alamat Email</label>
-				<input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Masukan Email anda">
+				<input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Masukan Email anda" name="email">
 			</div>
 			<div class="form-group">
 				<label for="InputPassword1">Password</label>
-				<input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+				<input type="password" class="form-control" id="InputPassword1" placeholder="Password" name="password">
 			</div>
-			
+			<div class="form-group">
+				<label for="jenis_usaha">Jenis Usaha</label>
+				<input type="text" class="form-control" id="jenis_usaha" name="jenis_usaha">
+			</div>
 			<div class="alert alert-dark small" role="alert">
-			Jika anda belum bergabung, silahkan <a href="register.php">daftar disini</a>.
+			Jika anda belum bergabung, silahkan <a href="">daftar disini</a>.
 			</div>
 			
-			<button type="submit" class="btn btn-outline-info">Masuk</button>
-			<a href="forgetpass.php" class="btn btn-link">Lupa Password</a>
+			<button type="submit" class="btn btn-outline-info" onclick="return confirm('Saya setuju mendaftar sebagai member anotero')">Daftar</button>
+			<a href="login.php" class="btn btn-link">Kembali</a>
 		</form>
 	</div>
 	<!-- form selesai -->
