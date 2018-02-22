@@ -20,10 +20,8 @@
   </head>
 
   <body>
-
-		<!-- Navigation -->
-		<nav class="navbar navbar-expand-lg navbar-dark fixed-top header-top-bar">
-		  <div class="container">
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top header-top-bar">
+		<div class="container">
 			<a class="navbar-brand" href="#">ANOTERO</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
@@ -46,41 +44,41 @@
 				</li>
 			  </ul>
 			</div>
-		  </div>
-		</nav>
+		</div>
+	</nav>
 
-		<section id="home" class="home">
-        	<div class="home_overlay">
-            	<div class="container">
-                	<div class="area">
-                		<h3>PROFESSIONAL APPLICATION SERVICE</h3>
-                        <p>Modern  -  Fast  -  Reliable</p>
-                	</div>
-                </div>
+	<section id="home" class="home">
+        <div class="home_overlay">
+           	<div class="container">
+               	<div class="area">
+               		<h3>PROFESSIONAL APPLICATION SERVICE</h3>
+                       <p>Modern  -  Fast  -  Reliable</p>
+               	</div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about">
-        	<div class="container-fluid">
-                <div class="row">
-                	<div class="tentang text-center">
-        				<div class="biru">
-        					<h4>Application Service</h4>
-        					<p>Memberikan berbagai macam aplikasi yang anda butuhkan<p>
-        				</div>
-        				<div class="kuning">
-        					<h4>FREE !</h4>
-        					<p>Semua Aplikasi dapat anda gunakan dengan Gratis<p>
-        				</div>
-        				</div>
+    <section id="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="tentang text-center">
+        			<div class="biru">
+        				<h4>Application Service</h4>
+        				<p>Memberikan berbagai macam aplikasi yang anda butuhkan<p>
         			</div>
-    			</div>
+        			<div class="kuning">
+        				<h4>Gratis !</h4>
+        				<p>Semua Aplikasi dapat anda gunakan dengan Gratis<p>
+        			</div>
+        		</div>
+        		</div>
     		</div>
-        </section>
+    	</div>
+    </section>
 
-		<div class="container">
-		  <h1 class="my-4"><center>Layanan</center></h1>
-		  <hr>
+	<div class="container">
+		<h1 class="my-4"><center>Layanan</center></h1>
+		<hr>
 
 		  <div class="row">
 			<div class="col-lg-4 col-sm-6 portfolio-item">
@@ -149,7 +147,7 @@
 				</div>
 			  </div>
 			</div>
-		  </div>
+		</div>
 		  <!-- /.row -->
 
       <!-- Pagination -->
