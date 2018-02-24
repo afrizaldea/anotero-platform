@@ -1,11 +1,34 @@
-body {
-  padding-top: 54px;
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 80px;
+    padding-right: 100px;
+    overflow: hidden;
+    background: #202242;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: #D9DBFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {color: #f7f7f7;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right; }
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
 }
 
 .text-center{
@@ -23,10 +46,6 @@ body {
 
 .pagination {
   margin-bottom: 30px;
-}
-
-.header-top-bar{
-    background: #202242;
 }
 
 .home{
