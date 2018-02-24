@@ -76,10 +76,10 @@ class User_model{
 	
 	public function validasi($email, $pass)
 	{
-		$query = false;
 		$sql = "Select * from tb_user where email='$email' and password='$pass'";
 		$query = mysql_query($sql);
-		return $query;
+		$num_rows = mysql_num_rows($query);
+		return $num_rows;
 	}
 	
 }

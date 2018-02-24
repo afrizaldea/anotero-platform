@@ -45,15 +45,41 @@ class User{
 	}
 	
 	public function validasi(){	
-		if($_POST)
+		if(isset($_POST['email']))
 		{
-			$email 					= $_POST['email'];;
-			$encpass				= sha1($_POST['password']);
+			$email 					= $_POST['email'];
+			$password 				= $_POST['password'];
+			$encpass				= sha1($password);
 			$user 					= new User_model();
-			$new_user				= $user->validasi($email,$encpass);				
+				
+			$validasi				= $user->validasi($email,$encpass);	
+			if($validasi==0)
+			{
+				echo "username atau password salah";
+			}else if($validasi==1)
+			{
+				session_start();
+				$_SESSION['email'] = $_POST['email'];
+				header("location: http://localhost/anotero-platform/user/dashboard.php");
+			}
 		}
 	}
 	
+	public function valhalaman(){	
+		session_start();
+		if(!isset($_SESSION['email']))
+		{
+			header("location: http://localhost/anotero-platform/user/login.php");
+		}
+	}	
+	
+	public function vallogin(){
+		session_start();
+		if(isset($_SESSION['email']))
+		{		
+			header("location: http://localhost/anotero-platform/user/dashboard.php");
+		}
+	}
 }
 
 ?>
