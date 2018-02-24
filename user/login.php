@@ -7,6 +7,7 @@
 	*/
 	include "../control/User.php";
 	$user = new User();
+	$user->vallogin();
 	$user->validasi();
 	//proses teknikal selesai
 ?>
@@ -56,12 +57,12 @@
 						</div>
 					</div>
 					<div class="col_half last">
-						<form>
+						<form action='' method="POST">
 							<div class="input_field"><span><small>Email</small></span>
 								<input type="email" name="email" required=""/>
 							</div>
 							<div class="input_field"><span><small class="kecil">Password</small></span>
-								<input type="password" name="phone" required=""/>
+								<input type="password" name="password" required=""/>
 							</div>
 							<input class="button" type="submit" value="Login"/>
 							<div class="row clearfix bottom_row">
