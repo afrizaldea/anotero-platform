@@ -11,9 +11,6 @@ include_once "../configuration/Database.php";
 
 class User_model{
 	
-	
-
-	
 	public function __construct() //supaya semua kodingan di fungsi ini konek ke database global
 	{
 		$db = new Database();
@@ -30,15 +27,15 @@ class User_model{
 	
 	public function register_profil($nama_perusahaan,$jenis_usaha)
 	{
-		$sql 	= "SELECT id FROM `tb_user` ORDER by id DESC LIMIT 1";
+		$sql 	= "SELECT email FROM `tb_user` ORDER by id DESC LIMIT 1";
 
 		$query	= mysql_query($sql);
 		while($row = mysql_fetch_array($query))
 		{
-			$user_id = $row['id'];
+			$email = $row['email'];
 		}
 
-		$sql = "INSERT INTO `tb_user_profil` (	`id`,`user_id`, `nama_perusahaan`, `jenis_usaha`, `status`) VALUES (null,'$user_id',
+		$sql = "INSERT INTO `tb_user_profil` (	`id`,`email`, `nama_perusahaan`, `jenis_usaha`, `status`) VALUES (null,'$email',
 		'$nama_perusahaan', '$jenis_usaha', '0')";
 
 		$query	= mysql_query($sql);
@@ -74,6 +71,16 @@ class User_model{
 	{
 		$sql = "Select * from tb_user where id='$id'";
 		$query = mysql_query($sql);
+		return $query;
+	}
+	
+	public function validasi($email, $pass)
+	{
+		$query = false;
+		$sql = "Select * from tb_user where email='$email' and password='$pass'";
+		echo $sql;
+		$query = mysql_query($sql);
+		echo $query;
 		return $query;
 	}
 	

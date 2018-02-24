@@ -11,6 +11,10 @@
 
     <title>ANOTERO - PLATFORM</title>
 
+    <!-- Bootstrap core CSS test -->
+    <link href="asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
     <link href="asset/css/custom/style.css" rel="stylesheet">
 
   </head>

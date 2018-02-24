@@ -23,26 +23,41 @@ class User{
 	{
 		if($_POST)
 		{
-			$this->email 			= $_POST['email'];
-			$email 					= $this->email;
+			$email 					= $_POST['email'];
+			$encpass				= sha1($_POST['password']);
+			$nama_perusahaan 		= $_POST['nama_perusahaan'];
+			$jenis_usaha 			= $_POST['jenis_usaha'];
 			
-			$this->password			= $_POST['password'];
-			$encpass				= sha1($this->password);
-			
-			$this->nama_perusahaan	= $_POST['nama_perusahaan'];
-			$nama_perusahaan 		= $this->nama_perusahaan;
-			
-			$this->jenis_usaha		= $_POST['jenis_usaha'];
-			$jenis_usaha 			= $this->jenis_usaha;
-			
+			//menginisialisasi model usder
 			$user 					= new User_model();
+			
+			//insert user
 			$new_user				= $user->register_user($email,$encpass);	
 			
+			//insert profil
 			$new_profil				= $user->register_profil($nama_perusahaan,$jenis_usaha);	
+			
 			if($new_user&&$new_profil)
 			{
-				
+				header("location: http://localhost/anotero-platform/user/login.php");
 			}
+		}
+	}
+	
+	public function validasi(){	
+		echo "validasi";
+		echo $_POST['email'];
+		if($_POST)
+		{
+			echo "ini validasi";
+			$email 					= $_POST['email'];;
+			$encpass				= sha1($_POST['password']);
+			$user 					= new User_model();
+				
+			$new_user				= $user->validasi($email,$encpass);	
+			
+
+				
 		}
 	}
 	
