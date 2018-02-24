@@ -1,3 +1,19 @@
+<?php
+
+/*
+############
+ketika form di load, maka tidak masuk ke model secara langsung karena itu bahaya
+maka di include lah si control user sebagai perantara
+############
+*/
+include "../control/User.php";
+$user = new User();
+$user->register();
+$capca = $user->capca();
+//proses teknikal selesai
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +46,7 @@
 					<img src="../asset/dashboard-libs/images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" method="POST" action="">
+				<form class="login100-form validate-form" method="POST" action="" onsubmit="return validasi_pass(this)">
 					<span class="login100-form-title">
 						Registrasi Sekarang!
 					</span>
@@ -44,7 +60,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Kata sandi harus di inputkan">
-						<input class="input100" type="password" name="password" placeholder="Kata sandi">
+						<input class="input100" type="password" id="pass" name="password" placeholder="Kata sandi">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -52,14 +68,14 @@
 					</div>
                     
                     <div class="wrap-input100 validate-input" data-validate = "Kata sandi harus di inputkan">
-						<input class="input100" type="password" name="password" placeholder="Konfirmasi Kata sandi">
+						<input class="input100" type="password" id="confim" name="confimpassword" placeholder="Konfirmasi Kata sandi">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
                     <div class="wrap-input100 validate-input" data-validate = "Masukan nama perusahaan anda">
-						<input class="input100" type="text" name="nama_perusahaan" placeholder="Nama perusahaan anda">
+						<input class="input100" type="text" name="nama" placeholder="Nama perusahaan anda">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-id-card-o" aria-hidden="true"></i>
@@ -79,9 +95,17 @@
 							Data ke 3
 						</option>
 					   </select>
+					   </br>
+						<fieldset>
+			                <legend>Captcha</legend>
+				                <label><?php echo $capca['cap1'] . "+" . $capca['cap2'] ?></label>
+					            <br/>
+					            <input type="text" class="input100" onkeypress=" return angka(event)" onkeyup="capca(<?php echo $capca['cap3']; ?>)" id="nilai" >
+			            </fieldset>
+			            <br/>
 					
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn" id="button" disabled>
 							Daftarkan Saya
 						</button>
 					</div>
@@ -128,3 +152,29 @@
 
 </body>
 </html>
+<script>
+    var hidden = false;
+    function capca(x) {
+	    var y = document.getElementById('nilai').value;
+        if(x == y) {
+            document.getElementById('button').disabled = false;
+        } else {
+            document.getElementById('button').disabled = true;
+        }
+    }
+	function angka(evt){
+	    var charCode = (evt.which) ? evt.which : event.keyCode
+		if(charCode > 31 && (charCode < 48 || charCode > 57))
+		
+		return false;
+		return true;
+	}
+	function validasi_pass(form){
+  if (form.password.value != form.confimpassword.value){
+    alert("Password dan Confirm password harus sama");
+    form.confimpassword.focus();
+    return (false);
+  }
+return (true);
+}
+</script>
