@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2018 at 12:16 PM
+-- Generation Time: Feb 24, 2018 at 01:01 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -25,11 +25,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_app`
+--
+
+CREATE TABLE `tb_app` (
+  `id` int(11) NOT NULL,
+  `kode_app` char(255) NOT NULL,
+  `nama_app` varchar(255) NOT NULL,
+  `harga` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_barang`
 --
 
 CREATE TABLE `tb_barang` (
   `id` int(11) NOT NULL,
+  `kode_detail` char(255) NOT NULL,
   `kode_barang` char(255) NOT NULL,
   `nama_barang` varchar(255) NOT NULL,
   `stok_barang` int(11) NOT NULL,
@@ -40,11 +54,26 @@ CREATE TABLE `tb_barang` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_detail_app`
+--
+
+CREATE TABLE `tb_detail_app` (
+  `id` int(11) NOT NULL,
+  `kode_detail` char(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `kode_app` char(255) NOT NULL,
+  `status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_head_jual`
 --
 
 CREATE TABLE `tb_head_jual` (
   `id` int(11) NOT NULL,
+  `kode_detail` char(255) NOT NULL,
   `no_faktur` char(255) NOT NULL,
   `tgl_transaksi` date NOT NULL,
   `total` double NOT NULL
@@ -58,6 +87,7 @@ CREATE TABLE `tb_head_jual` (
 
 CREATE TABLE `tb_item` (
   `id` int(11) NOT NULL,
+  `kode_detail` char(255) NOT NULL,
   `no_faktur` char(255) NOT NULL,
   `kode_barang` char(255) NOT NULL,
   `nama_barang` varchar(255) NOT NULL,
@@ -73,6 +103,7 @@ CREATE TABLE `tb_item` (
 
 CREATE TABLE `tb_log_pembelian` (
   `id` int(11) NOT NULL,
+  `kode_detail` char(255) NOT NULL,
   `kode_barang` char(255) NOT NULL,
   `tgl_beli` date NOT NULL,
   `tgl_kadaluarsa` date NOT NULL,
@@ -88,6 +119,7 @@ CREATE TABLE `tb_log_pembelian` (
 
 CREATE TABLE `tb_stok_min` (
   `id` int(11) NOT NULL,
+  `kode_detail` char(255) NOT NULL,
   `kode_barang` char(255) NOT NULL,
   `nama_barang` varchar(255) NOT NULL,
   `stok_barang` int(11) NOT NULL,
@@ -103,6 +135,7 @@ CREATE TABLE `tb_stok_min` (
 
 CREATE TABLE `tb_supplier` (
   `id` int(11) NOT NULL,
+  `kode_detail` char(255) NOT NULL,
   `id_supplier` char(255) NOT NULL,
   `nama_supplier` varchar(255) NOT NULL,
   `alamat_supplier` varchar(255) NOT NULL,
@@ -118,6 +151,7 @@ CREATE TABLE `tb_supplier` (
 
 CREATE TABLE `tb_tmp_item` (
   `id` int(11) NOT NULL,
+  `kode_detail` char(255) NOT NULL,
   `no_faktur` char(255) NOT NULL,
   `kode_barang` char(255) NOT NULL,
   `nama_barang` varchar(255) NOT NULL,
@@ -130,9 +164,21 @@ CREATE TABLE `tb_tmp_item` (
 --
 
 --
+-- Indexes for table `tb_app`
+--
+ALTER TABLE `tb_app`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_detail_app`
+--
+ALTER TABLE `tb_detail_app`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -176,9 +222,21 @@ ALTER TABLE `tb_tmp_item`
 --
 
 --
+-- AUTO_INCREMENT for table `tb_app`
+--
+ALTER TABLE `tb_app`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tb_detail_app`
+--
+ALTER TABLE `tb_detail_app`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
