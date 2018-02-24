@@ -53,14 +53,17 @@ $user->register();
 				</div>
 				<div class="center">
 					<form action="" method="POST">
-						<div class="input_field"><span><small>Email</small></span>
-							<input type="email" name="email" required=""/>
+						<div class="input_field"><span><small><div class="sepan">&nbsp; Nama Perusahaan</div></small></span>
+							<input type="text2" name="nama" required=""/>
 						</div>
-						<div class="input_field"><span><small class="kecil">Password</small></span>
-							<input type="password" name="password" required=""/>
+						<div class="input_field"><span><small><div class="sepan">&nbsp; Email</div></small></span>
+							<input type="email2" name="email" required=""/>
 						</div>
-						<div class="input_field"><span><small class="kecil">Confrim</small></span>
-							<input type="password" name="confimpassword" required=""/>
+						<div class="input_field"><span><small><div class="sepan">&nbsp; Password</div></small></span>
+							<input type="password2" name="password" required=""/>
+						</div>
+						<div class="input_field"><span><small><div class="sepan">&nbsp; Confrim Password</div></small></small></span>
+							<input type="password2" name="confimpassword" required=""/>
 						</div>
     					<select>
     						<option value="0">-----</option>
@@ -71,10 +74,10 @@ $user->register();
       						<option value="5">Clothing</option>
       						<option value="6">Toko Elektronik</option>
     					</select>
-    					</p>
-
+    					</br>
+    					<p> Saya menyetujui untuk membagikan data pendaftaran kepada penyedia layanan Anotero</p>
 						<label class="switch">
-  							<input type="checkbox" checked>
+  							<input type="checkbox">
   							<span class="slider round"></span>
 						</label>
 						</p>

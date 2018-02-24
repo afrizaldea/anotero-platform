@@ -107,9 +107,19 @@ ul.topnav li.right {float: right; }
   left: 0;
   top: 0;
   color: #333;
-  height: 97%;
+  height: 96%;
   border: 1px solid #ccc;
   width: 80px;
+  background: #f7f7f7;
+}
+.form_wrapper .input_field > span .sepan{
+  position: absolute;
+  left: 3;
+  top: 0;
+  color: #333;
+  height: 95%;
+  border: 1px solid #ccc;
+  width: 140px;
   background: #f7f7f7;
 }
 .form_wrapper .input_field small {
@@ -134,7 +144,25 @@ ul.topnav li.right {float: right; }
   -ms-transition: all 0.30s ease-in-out;
   transition: all 0.30s ease-in-out;
 }
+.form_wrapper input[type="text2"] {
+  width: 100%;
+  padding: 8px 10px 9px 150px;
+  height: 35px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+}
 .form_wrapper input[type="text"]:focus {
+  -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+  -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+  box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+  border: 1px solid #f5ba1a;
+}
+.form_wrapper input[type="text2"]:focus {
   -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
   -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
   box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
@@ -152,7 +180,25 @@ ul.topnav li.right {float: right; }
   -ms-transition: all 0.30s ease-in-out;
   transition: all 0.30s ease-in-out;
 }
+.form_wrapper input[type="email2"] {
+  width: 100%;
+  padding: 8px 10px 9px 150px;
+  height: 35px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+}
 .form_wrapper input[type="email"]:focus {
+  -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+  -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+  box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+  border: 1px solid #f5ba1a;
+}
+.form_wrapper input[type="email2"]:focus {
   -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
   -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
   box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
@@ -170,7 +216,25 @@ ul.topnav li.right {float: right; }
   -ms-transition: all 0.30s ease-in-out;
   transition: all 0.30s ease-in-out;
 }
+.form_wrapper input[type="password2"] {
+  width: 100%;
+  padding: 8px 10px 9px 150px;
+  height: 35px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+}
 .form_wrapper input[type="password"]:focus {
+  -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+  -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+  box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+  border: 1px solid #f5ba1a;
+}
+.form_wrapper input[type="password2"]:focus {
   -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
   -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
   box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
