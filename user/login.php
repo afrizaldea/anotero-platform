@@ -1,3 +1,20 @@
+<?php
+
+/*
+############
+ketika form di load, maka tidak masuk ke model secara langsung karena itu bahaya
+maka di include lah si control user sebagai perantara
+############
+*/
+include "../control/User.php";
+$user = new User();
+$user->validasi();
+
+//proses teknikal selesai
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +73,7 @@
 	
 	<div class="row justify-content-center">
 	
-		<form>
+		<form action="" method="POST">
 			<div class="form-group">
 				<label for="InputEmail1">Alamat Email</label>
 				<input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Masukan Email anda">
@@ -70,7 +87,7 @@
 			Jika anda belum bergabung, silahkan <a href="register.php">daftar disini</a>.
 			</div>
 			
-			<button type="submit" class="btn btn-outline-info">Masuk</button>
+			<button type="submit" class="btn btn-outline-info" onclick="return confirm('Saya setuju mendaftar sebagai member anotero')">Masuk</button>
 			<a href="forgetpass.php" class="btn btn-link">Lupa Password</a>
 		</form>
 	</div>
