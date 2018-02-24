@@ -28,11 +28,19 @@ class User_model{
 		return $query;
 	}
 	
-	public function register_profil($nama_perusahaan,$jenis_usaha, $asal_kota, $alamat, $website)
+	public function register_profil($nama_perusahaan,$jenis_usaha)
 	{
-		$sql = "INSERT INTO `tb_user_profil` (`user_id`, `nama_perusahaan`, `jenis_usaha`, `asal_kota`, `status`, `alamat`, `website`) VALUES (
-		'$nama_perusahaan', '$jenis_usaha', '$asal_kota', '0', '$alamat', '$website')";
-		
+		$sql 	= "SELECT id FROM `tb_user` ORDER by id DESC LIMIT 1";
+
+		$query	= mysql_query($sql);
+		while($row = mysql_fetch_array($query))
+		{
+			$user_id = $row['id'];
+		}
+
+		$sql = "INSERT INTO `tb_user_profil` (	`id`,`user_id`, `nama_perusahaan`, `jenis_usaha`, `status`) VALUES (null,'$user_id',
+		'$nama_perusahaan', '$jenis_usaha', '0')";
+
 		$query	= mysql_query($sql);
 		return $query;
 	}
