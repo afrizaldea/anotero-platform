@@ -9,7 +9,7 @@ maka di include lah si control user sebagai perantara
 include "../control/User.php";
 $user = new User();
 $user->register();
-
+$capca = $user->capca();
 //proses teknikal selesai
 
 
@@ -75,13 +75,20 @@ $user->register();
       						<option value="6">Toko Elektronik</option>
     					</select>
     					</br>
+						<fieldset>
+			                <legend>Captcha</legend>
+				                <label><?php echo $capca['cap1'] . "+" . $capca['cap2'] ?></label>
+					            <br/>
+					            <input type="text" onkeypress=" return angka(event)" onkeyup="capca(<?php echo $capca['cap3']; ?>)" id="nilai" >
+			            </fieldset>
+			            <br/>
     					<p> Saya menyetujui untuk membagikan data pendaftaran kepada penyedia layanan Anotero</p>
 						<label class="switch">
   							<input type="checkbox">
   							<span class="slider round"></span>
 						</label>
 						</p>
-						<input class="button" type="submit" value="Daftar"/>
+						<input id="button" style="visibility: hidden" type="submit" value="Daftar"/>
 					</form>
 				</div>
 			</div>
@@ -89,3 +96,21 @@ $user->register();
 	
 	</body>
 </html>
+<script>
+    var hidden = false;
+    function capca(x) {
+	    var y = document.getElementById('nilai').value;
+        if(x==y) {
+            document.getElementById('button').style.visibility = 'visible';
+        } else {
+            document.getElementById('button').style.visibility = 'hidden';
+        }
+    }
+	function angka(evt){
+	    var charCode = (evt.which) ? evt.which : event.keyCode
+		if(charCode > 31 && (charCode < 48 || charCode > 57))
+		
+		return false;
+		return true;
+	}
+</script>

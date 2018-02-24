@@ -81,6 +81,18 @@ class User_model{
 		$num_rows = mysql_num_rows($query);
 		return $num_rows;
 	}
+	public function capca_register1(){
+	    $cap1 = (rand(0,10));
+		return $cap1;
+	}
+	public function capca_register2(){
+	    $cap2 = (rand(0,10));
+		return $cap2;
+	}
+	public function capca_register3($a,$b){
+		$hasil_capca= $a + $b;
+	    return $hasil_capca;
+	}
 	
 }
 

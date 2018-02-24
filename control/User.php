@@ -80,6 +80,19 @@ class User{
 			header("location: http://localhost/anotero-platform/user/dashboard.php");
 		}
 	}
+	public function capca(){
+	    $capcay = new User_model();
+		$cap1 = $capcay->capca_register1();
+		$cap2 = $capcay->capca_register2();
+		$cap3 = $capcay->capca_register3($cap1,$cap2);
+		$capca = array(
+		    "cap1" => $cap1,
+		    "cap2" => $cap2,
+		    "cap3" => $cap3,
+		);
+		echo $capca['cap3'];
+		return $capca;
+	}
 }
 
 ?>
