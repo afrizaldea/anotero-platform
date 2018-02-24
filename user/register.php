@@ -1,3 +1,10 @@
+<?php
+
+include "../control/User.php";
+	$user = new User();
+	$user->register();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,15 +76,28 @@
                     <div class="wrap-input100 validate-input" data-validate = "masukan jenis_usaha anda">
 						<select class="input100" type="text" name="jenis_usaha" placeholder="jenis usaha anda">
 						<span class="focus-input100"></span>
-						<option class="symbol-input100">
-							Data ke 1
+						<option class="symbol-input100" value="">
+							Pilih Jenis Usaha
 						</option>
-                            <option class="symbol-input100">
-							Data ke 2
+                            <option class="symbol-input100" value="Toko Baju">
+							Toko Baju
 						</option>
-                            <option class="symbol-input100">
-							Data ke 3
+                            <option class="symbol-input100" value="Apotek">
+							Apotek
 						</option>
+						    <option class="symbol-input100" value="Mini Market">
+							Mini Market
+						</option>
+						    <option class="symbol-input100" value="Restoran">
+							Restoran
+						</option>
+						    <option class="symbol-input100" value="Toko Elektronik">
+							Toko Elektronik
+						</option>
+						    <option class="symbol-input100" value="Hotel">
+							Hotel
+						</option>
+						
 					   </select>
 					
 					<div class="container-login100-form-btn">
