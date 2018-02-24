@@ -43,16 +43,23 @@
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password harus di inputkan">
-						<input class="input100" type="password" name="password" placeholder="Password">
+					<div class="wrap-input100 validate-input" data-validate = "Kata sandi harus di inputkan">
+						<input class="input100" type="password" name="password" placeholder="Kata sandi">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
                     
-                    <div class="wrap-input100 validate-input" data-validate = "masukan nama perusahaan anda">
-						<input class="input100" type="text" name="nama_perusahaan" placeholder="nama perusahaan anda">
+                    <div class="wrap-input100 validate-input" data-validate = "Kata sandi harus di inputkan">
+						<input class="input100" type="password" name="password" placeholder="Konfirmasi Kata sandi">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Masukan nama perusahaan anda">
+						<input class="input100" type="text" name="nama_perusahaan" placeholder="Nama perusahaan anda">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-id-card-o" aria-hidden="true"></i>
@@ -83,7 +90,7 @@
 						<span class="txt1">
 							Anda Sudah Punya Akun?
 						</span>
-						<a class="txt2" href="#">
+						<a class="txt2" href="login.php">
 							Masuk disini!
 						</a>
 					</div>
