@@ -88,7 +88,7 @@ $capca = $user->capca();
   							<span class="slider round"></span>
 						</label>
 						</p>
-						<input id="button" style="visibility: hidden" type="submit" value="Daftar"/>
+						<input id="button" disabled type="submit" value="Daftar"/>
 					</form>
 				</div>
 			</div>
@@ -101,9 +101,9 @@ $capca = $user->capca();
     function capca(x) {
 	    var y = document.getElementById('nilai').value;
         if(x==y) {
-            document.getElementById('button').style.visibility = 'visible';
+            document.getElementById('button').disabled = false;
         } else {
-            document.getElementById('button').style.visibility = 'hidden';
+            document.getElementById('button').disabled = true;
         }
     }
 	function angka(evt){
