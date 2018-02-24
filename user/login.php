@@ -68,7 +68,7 @@
 								<div class="col_half remember_me">
 									<input name="" type="checkbox" value=""/>Remember me
 								</div>
-								<div class="col_half forgot_pw"><a href="#">Lupa Passsword?</a></div>
+								<div class="col_half forgot_pw"><a href="forgetpass.php">Lupa Passsword?</a></div>
 							</div>
 						</form>
 					</div>

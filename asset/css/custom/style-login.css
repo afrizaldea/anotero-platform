@@ -186,6 +186,7 @@ ul.topnav li.right {float: right; }
   cursor: pointer;
   color: #fff;
   font-size: 1.1em;
+  border-radius: 4px;
   margin-bottom: 10px;
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
@@ -198,9 +199,7 @@ ul.topnav li.right {float: right; }
 .form_wrapper input[type="submit"]:focus {
   background: #e1a70a;
 }
-.form_wrapper input[type="checkbox"] {
-  margin-right: 2px;
-}
+
 
 .form_container .row .col_half.last {
   border-left: 1px solid #ccc;
@@ -299,4 +298,7 @@ ul.topnav li.right {float: right; }
   .remember_me {
     padding-bottom: 20px;
   }
-}
+
+  .center {
+
+  }
