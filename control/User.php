@@ -45,19 +45,12 @@ class User{
 	}
 	
 	public function validasi(){	
-		echo "validasi";
-		echo $_POST['email'];
 		if($_POST)
 		{
-			echo "ini validasi";
 			$email 					= $_POST['email'];;
 			$encpass				= sha1($_POST['password']);
 			$user 					= new User_model();
-				
-			$new_user				= $user->validasi($email,$encpass);	
-			
-
-				
+			$new_user				= $user->validasi($email,$encpass);				
 		}
 	}
 	

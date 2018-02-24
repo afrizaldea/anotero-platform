@@ -126,7 +126,6 @@
         <p class="m-0 text-center">Copyright &copy; ANOTERO.ID</p>
     </footer>
 
-
   </body>
 
 </html>

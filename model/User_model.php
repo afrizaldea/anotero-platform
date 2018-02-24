@@ -78,9 +78,7 @@ class User_model{
 	{
 		$query = false;
 		$sql = "Select * from tb_user where email='$email' and password='$pass'";
-		echo $sql;
 		$query = mysql_query($sql);
-		echo $query;
 		return $query;
 	}
 	

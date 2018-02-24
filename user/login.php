@@ -1,3 +1,16 @@
+<?php
+	/*
+	############
+	ketika form di load, maka tidak masuk ke model secara langsung karena itu bahaya
+	maka di include lah si control user sebagai perantara
+	############
+	*/
+	include "../control/User.php";
+	$user = new User();
+	$user->validasi();
+	//proses teknikal selesai
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
