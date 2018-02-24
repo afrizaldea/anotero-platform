@@ -1,3 +1,10 @@
+<?php
+
+include "../control/User.php";
+	$user = new User();
+	$user->register();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,16 +50,23 @@
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password harus di inputkan">
-						<input class="input100" type="password" name="password" placeholder="Password">
+					<div class="wrap-input100 validate-input" data-validate = "Kata sandi harus di inputkan">
+						<input class="input100" type="password" name="password" placeholder="Kata sandi">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
                     
-                    <div class="wrap-input100 validate-input" data-validate = "masukan nama perusahaan anda">
-						<input class="input100" type="text" name="nama_perusahaan" placeholder="nama perusahaan anda">
+                    <div class="wrap-input100 validate-input" data-validate = "Kata sandi harus di inputkan">
+						<input class="input100" type="password" name="password" placeholder="Konfirmasi Kata sandi">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Masukan nama perusahaan anda">
+						<input class="input100" type="text" name="nama_perusahaan" placeholder="Nama perusahaan anda">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-id-card-o" aria-hidden="true"></i>
@@ -62,15 +76,28 @@
                     <div class="wrap-input100 validate-input" data-validate = "masukan jenis_usaha anda">
 						<select class="input100" type="text" name="jenis_usaha" placeholder="jenis usaha anda">
 						<span class="focus-input100"></span>
-						<option class="symbol-input100">
-							Data ke 1
+						<option class="symbol-input100" value="">
+							Pilih Jenis Usaha
 						</option>
-                            <option class="symbol-input100">
-							Data ke 2
+                            <option class="symbol-input100" value="Toko Baju">
+							Toko Baju
 						</option>
-                            <option class="symbol-input100">
-							Data ke 3
+                            <option class="symbol-input100" value="Apotek">
+							Apotek
 						</option>
+						    <option class="symbol-input100" value="Mini Market">
+							Mini Market
+						</option>
+						    <option class="symbol-input100" value="Restoran">
+							Restoran
+						</option>
+						    <option class="symbol-input100" value="Toko Elektronik">
+							Toko Elektronik
+						</option>
+						    <option class="symbol-input100" value="Hotel">
+							Hotel
+						</option>
+						
 					   </select>
 					
 					<div class="container-login100-form-btn">
