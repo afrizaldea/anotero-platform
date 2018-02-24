@@ -36,10 +36,12 @@ class User{
 			$jenis_usaha 			= $this->jenis_usaha;
 			
 			$user 					= new User_model();
-			$new_user				= $user->register_user($email,$encpass,$nama_perusahaan,$jenis_usaha);	
-			if($new_user)
+			$new_user				= $user->register_user($email,$encpass);	
+			
+			$new_profil				= $user->register_profil($nama_perusahaan,$jenis_usaha);	
+			if($new_user&&$new_profil)
 			{
-				header("location: http://localhost/anotero-platform/");
+				
 			}
 		}
 	}
