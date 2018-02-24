@@ -11,7 +11,7 @@
 
     <title>ANOTERO - PLATFORM</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS test -->
     <link href="asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
