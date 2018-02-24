@@ -19,9 +19,19 @@ class User_model{
 		$db = new Database();
 	}
 
-	public function register_user($email,$password,$nama_perusahaan,$jenis_usaha)
+	public function register_user($email,$password)
 	{
-		$sql	= "INSERT INTO `tb_user` (`id`, `email`, `password`, `nama_perusahaan`, `jenis_usaha`, `asal_kota`, `status`, `alamat`, `website`) VALUES (NULL, '$email', '$password', '$nama_perusahaan', '$jenis_usaha', '', '0', '', '')";
+		$sql	= "INSERT INTO `tb_user` (`id`, `email`, `password`, `hak_akses`) VALUES (NULL, '$email', '$password' ,'user'
+		)";
+		
+		$query	= mysql_query($sql);
+		return $query;
+	}
+	
+	public function register_profil($nama_perusahaan,$jenis_usaha, $asal_kota, $alamat, $website)
+	{
+		$sql = "INSERT INTO `tb_user_profil` (`user_id`, `nama_perusahaan`, `jenis_usaha`, `asal_kota`, `status`, `alamat`, `website`) VALUES (
+		'$nama_perusahaan', '$jenis_usaha', '$asal_kota', '0', '$alamat', '$website')";
 		
 		$query	= mysql_query($sql);
 		return $query;
@@ -52,9 +62,9 @@ class User_model{
 		return $query;
 	}
 
-	public function select()
+	public function select($id)
 	{
-		$sql = "";
+		$sql = "Select * from tb_user where id='$id'";
 		$query = mysql_query($sql);
 		return $query;
 	}
