@@ -18,36 +18,14 @@
 
 	</head>
 
-	<body class="container">
-
-		<!-- Navigation -->
-		<nav class="navbar navbar-expand-lg navbar-dark fixed-top header-top-bar">
-		  <div class="container">
-			<a class="navbar-brand" href="#">ANOTERO</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-			  <ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-				  <a class="nav-link" href="../index.php">Home
-				  </a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="../index.php #tentang">Tentang</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="../index.php #layanan">Layanan</a>
-				</li>
-				<li class="nav-item active">
-				  <a class="nav-link" href="user/login.php">Login</a>
-				  <span class="sr-only">(current)</span>
-				</li>
-			  </ul>
-			</div>
-		  </div>
-		</nav>
-		<br/>
+	<body>
+		<ul class="topnav">
+  			<li><a href="#about"> ANOTERO </a></li>
+  			<li class="right"><a href="login.php">Login</a></li>
+  			<li class="right"><a href="../index.php #layanan">Layanan</a></li>
+  			<li class="right"><a href="../index.php #about">Tentang</a></li>
+  			<li class="right"><a href="../index.php #home">Home</a></li>		
+		</ul>
 	
 	
 	<!-- form biar ketengah -->

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<!--testing alsa-->
+
   <head>
 
     <meta charset="utf-8">
@@ -20,40 +20,20 @@
   </head>
 
   <body>
-  	<!-- haidh was here -->
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top header-top-bar">
-		<div class="container">
-			<a class="navbar-brand" href="#">ANOTERO</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-			  <ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
-				  <a class="nav-link" href="#home">Home
-					<span class="sr-only">(current)</span>
-				  </a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="#about">Tentang</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="#layanan">Layanan</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="user/login.php">Login</a>
-				</li>
-			  </ul>
-			</div>
-		</div>
-	</nav>
+  	<ul class="topnav">
+  		<li><a href="#about"> ANOTERO </a></li>
+  		<li class="right"><a href="user/login.php">Login</a></li>
+  		<li class="right"><a href="#layanan">Layanan</a></li>
+  		<li class="right"><a href="#about">Tentang</a></li>
+  		<li class="right"><a href="#home">Home</a></li>		
+	</ul>
 
 	<section id="home" class="home">
         <div class="home_overlay">
            	<div class="container">
         	  	<div class="area">
                		<h3>PROFESSIONAL APPLICATION SERVICE</h3>
-                       <p>Modern  -  Fast  -  Reliable</p>
+                    <p>Modern  -  Fast  -  Reliable</p>
                	</div>
             </div>
         </div>
