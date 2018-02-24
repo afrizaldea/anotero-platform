@@ -1,13 +1,64 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+
 ul.topnav {
     list-style-type: none;
     margin: 0;
-    padding-left: 80px;
-    padding-right: 100px;
+    padding: 0;
     overflow: hidden;
     background: #202242;
     position: fixed;
-    top: 0;
     width: 100%;
+}
+
+ul.topnav .kiri {
+    padding-left: 100px;
+}
+
+ul.topnav .kanan {
+    padding-right: 100px;
 }
 
 ul.topnav li {float: left;}
@@ -24,7 +75,7 @@ ul.topnav li a:hover:not(.active) {color: #f7f7f7;}
 
 ul.topnav li a.active {background-color: #4CAF50;}
 
-ul.topnav li.right {float: right; }
+ul.topnav li.right {float: right;}
 
 @media screen and (max-width: 600px){
     ul.topnav li.right, 
@@ -38,14 +89,6 @@ ul.topnav li.right {float: right; }
 .no-padding {
     padding: 0 !important;
     margin:0 !important;
-}
-
-.portfolio-item {
-  margin-bottom: 30px;
-}
-
-.pagination {
-  margin-bottom: 30px;
 }
 
 .home{
@@ -79,7 +122,7 @@ ul.topnav li.right {float: right; }
 	float: left;
 	background: #202242;
     padding: 150px 0px;
-    min-width: 631px;
+    min-width: 632px;
 }
 
 .biru h4 {
@@ -91,8 +134,8 @@ ul.topnav li.right {float: right; }
 .kuning {
 	float: left;	
 	background: #ffe13e;
-	padding: 150px 0px;
-	min-width: 631px;
+    padding: 150px 0px;
+	min-width: 630px;
 }
 
 .kuning h4 {
@@ -103,4 +146,82 @@ ul.topnav li.right {float: right; }
 
 .bg-footer {
     background: #202242;
+}
+
+#produk {
+    background-color: #f7f7f7;
+    padding: 1%  0 2% 0;
+}
+
+#produk hr {
+    width: 60%;
+}
+
+#produk .responsive {
+    padding: 0 7px;
+    float: left;
+    width: 28%;
+    margin : 25px;
+}
+
+#produk h4{
+    color: #202242;
+    font-size: 21px;
+    margin-top: 1px;
+}
+
+#produk p{
+    color: #202242;
+    font-size: 16px;
+    margin-left: 1px;
+}
+
+#produk .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+
+div.gallery:hover {
+    border: 1px solid #202242;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+div.desc a {
+   text-decoration: none;
+   color: #202242;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+    margin : 30px;
+}
+
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.foot {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #f7f7f7
 }

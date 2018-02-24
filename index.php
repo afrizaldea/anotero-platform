@@ -11,165 +11,121 @@
 
     <title>ANOTERO - PLATFORM</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="asset/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="asset/css/custom/style.css" rel="stylesheet">
 
   </head>
 
   <body>
   	<ul class="topnav">
-  		<li><a href="#about"> ANOTERO </a></li>
-  		<li class="right"><a href="user/login.php">Login</a></li>
-  		<li class="right"><a href="#layanan">Layanan</a></li>
-  		<li class="right"><a href="#about">Tentang</a></li>
-  		<li class="right"><a href="#home">Home</a></li>		
+  		<div class="kiri">
+  			<li><a href="#"> ANOTERO </a></li>
+  		</div>
+  		<div class="kanan">
+  			<li class="right"><a href="user/login.php">Login</a></li>
+  			<li class="right"><a href="#produk">Layanan</a></li>
+  			<li class="right"><a href="#about">Tentang</a></li>
+  			<li class="right"><a href="#home">Home</a></li>		
+  		</div>
 	</ul>
 
 	<section id="home" class="home">
         <div class="home_overlay">
-           	<div class="container">
-        	  	<div class="area">
-               		<h3>PROFESSIONAL APPLICATION SERVICE</h3>
-                    <p>Modern  -  Fast  -  Reliable</p>
-               	</div>
+          	<div class="area">
+              	<h3>PROFESSIONAL APPLICATION SERVICE</h3>
+                <p>Modern  -  Fast  -  Reliable</p>
             </div>
         </div>
     </section>
 
     <section id="about">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="tentang text-center">
-        			<div class="biru">
-        				<h4>Application Service</h4>
-        				<p>Memberikan berbagai macam aplikasi yang anda butuhkan<p>
-        			</div>
-        			<div class="kuning">
-        				<h4>Gratis !</h4>
-        				<p>Semua Aplikasi dapat anda gunakan dengan Gratis<p>
-        			</div>
-        		</div>
-        		</div>
-    		</div>
-    	</div>
+        <div class="tentang text-center">
+        	<div class="biru">
+        		<h4>Application Service</h4>
+        		<p>Memberikan berbagai macam aplikasi yang anda butuhkan<p>
+        	</div>
+        	<div class="kuning">
+        		<h4>Gratis !</h4>
+        		<p>Semua Aplikasi dapat anda gunakan dengan Gratis<p>
+        	</div>
+        </div>
     </section>
 
-	<div class="container" id="layanan">
-		<h1 class="my-4"><center>Layanan</center></h1>
+    <div id="produk">
+    	<h1><center>Layanan</center></h1>
 		<hr>
-
-		  <div class="row">
-			<div class="col-lg-4 col-sm-6 portfolio-item">
-			  <div class="card h-100">
-				<a href="#"><img class="card-img-top" src="asset/img/medium/apotek.jpg" alt=""></a>
-				<div class="card-body">
-				  <h4 class="card-title">
-					<a href="#">APOTEK</a>
-				  </h4>
-				  <p class="card-text">Buat Program Apotek mu Disini !</p>
+		<div class="responsive">
+			<div class="gallery">
+				<a target="_blank" href="asset/img/medium/clothing.jpg">
+					<img class="card-img-top" src="asset/img/medium/clothing.jpg" alt="" width="400">
+				</a>
+				<div class="desc">
+					<h4><a href="">CLOTHING</a></h4>
+					<p>Buat Program Clothing mu Disini !</p>
 				</div>
-			  </div>
-			</div>
-			<div class="col-lg-4 col-sm-6 portfolio-item">
-			  <div class="card h-100">
-				<a href="#"><img class="card-img-top" src="asset/img/medium/clothing.jpg" alt=""></a>
-				<div class="card-body">
-				  <h4 class="card-title">
-					<a href="#">CLOTHING</a>
-				  </h4>
-				  <p class="card-text">Buat Program Clothing mu Disini !</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-lg-4 col-sm-6 portfolio-item">
-			  <div class="card h-100">
-				<a href="#"><img class="card-img-top" src="asset/img/medium/hotel.jpg" alt=""></a>
-				<div class="card-body">
-				  <h4 class="card-title">
-					<a href="#">HOTEL</a>
-				  </h4>
-				  <p class="card-text">Buat Program Hotel mu Disini !</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-lg-4 col-sm-6 portfolio-item">
-			  <div class="card h-100">
-				<a href="#"><img class="card-img-top" src="asset/img/medium/restaurant.jpg" alt=""></a>
-				<div class="card-body">
-				  <h4 class="card-title">
-					<a href="#">RESTAURANT</a>
-				  </h4>
-				  <p class="card-text">Buat Program Restaurant mu Disini !</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-lg-4 col-sm-6 portfolio-item">
-			  <div class="card h-100">
-				<a href="#"><img class="card-img-top" src="asset/img/medium/mini-market.jpg" alt=""></a>
-				<div class="card-body">
-				  <h4 class="card-title">
-					<a href="#">MINI-MARKET</a>
-				  </h4>
-				  <p class="card-text">Buat Program Mini-Market mu Disini !</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-lg-4 col-sm-6 portfolio-item">
-			  <div class="card h-100">
-				<a href="#"><img class="card-img-top" src="asset/img/medium/toko-elektronik.jpg" alt=""></a>
-				<div class="card-body">
-				  <h4 class="card-title">
-					<a href="#">TOKO ELEKTRONIK</a>
-				  </h4>
-				  <p class="card-text">Buat Program Toko Material mu Disini !</p>
-				</div>
-			  </div>
 			</div>
 		</div>
-		  <!-- /.row -->
+		<div class="responsive">
+			<div class="gallery">
+				<a target="_blank" href="asset/img/medium/apotek.jpg">
+					<img src="asset/img/medium/apotek.jpg" alt="" width="400">
+				</a>
+				<div class="desc">
+					<h4><a href="">APOTEK</a></h4>
+					<p>Buat Program Apotek mu Disini !</p>
+				</div>
+			</div>
+		</div>
+		<div class="responsive">
+			<div class="gallery">
+				<a target="_blank" href="asset/img/medium/hotel.jpg">
+					<img class="card-img-top" src="asset/img/medium/hotel.jpg" alt="" width="400">
+				</a>
+				<div class="desc">
+					<h4><a href="">HOTEL</a></h4>
+					<p>Buat Program Hotel mu Disini !</p>
+				</div>
+			</div>
+		</div>
+		<div class="responsive">
+			<div class="gallery">
+				<a target="_blank" href="asset/img/medium/restaurant.jpg">
+					<img class="card-img-top" src="asset/img/medium/restaurant.jpg" alt="" width="400">
+				</a>
+				<div class="desc">
+					<h4><a href="">RESTAURANT</a></h4>
+					<p>Buat Program Restaurant mu Disini !</p>
+				</div>
+			</div>
+		</div>
+		<div class="responsive">
+			<div class="gallery">
+				<a target="_blank" href="asset/img/medium/mini-market.jpg">
+					<img src="asset/img/medium/mini-market.jpg" alt="" width="400">
+				</a>
+				<div class="desc">
+					<h4><a href="">MINI MARKET</a></h4>
+					<p>Buat Program Mini Market mu Disini !</p>
+				</div>
+			</div>
+		</div>
+		<div class="responsive">
+			<div class="gallery">
+				<a target="_blank" href="asset/img/medium/toko-elektronik.jpg">
+					<img class="card-img-top" src="asset/img/medium/toko-elektronik.jpg" alt="" width="400">
+				</a>
+				<div class="desc">
+					<h4><a href="">TOKO ELEKTRONIK</a></h4>
+					<p>Buat Program Toko Elektronik mu Disini !</p>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
 
-      <!-- Pagination -->
-      <ul class="pagination justify-content-center">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">1</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">2</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-          </a>
-        </li>
-      </ul>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- Footer -->
-    <footer class="py-5 bg-footer">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; ANOTERO.ID</p>
-      </div>
-      <!-- /.container -->
+    <footer class="foot bg-footer">
+        <p class="m-0 text-center">Copyright &copy; ANOTERO.ID</p>
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="asset/js/jquery/jquery.min.js"></script>
-    <script src="asset/js/bootstrap/bootstrap.bundle.min.js"></script>
 
   </body>
 
