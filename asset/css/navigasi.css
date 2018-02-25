@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans|Oswald');
+
+
+/*=========================== MENU ===========================*/
+
+/* Header fixed and background colors */
+    .navigasi{
+        position: fixed;
+        top: 0px;
+        max-height: 100px;
+        z-index: 999;
+        width: 100%;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        opacity: 1; 
+    }
+
+    .navbar{
+        margin-bottom:0;
+        background-color: #38455C;
+        border-radius: 0px;
+        transition-duration:.3s;
+        transition-property:all;
+        transition-timing-function:cubic-bezier(.7,1,.7,1)
+    }
+    
+    .navbar a{
+        color: aliceblue;
+    }
+    .navbar a:hover{
+        color: silver;
+    }

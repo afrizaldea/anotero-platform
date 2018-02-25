@@ -7,34 +7,64 @@ include "../control/User.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Login V1</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="../asset/dashboard-libs/image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../asset/dashboard-libs/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../asset/dashboard-libs/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../asset/dashboard-libs/vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="../asset/dashboard-libs/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../asset/dashboard-libs/vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../asset/dashboard-libs/css/util.css">
-	<link rel="stylesheet" type="text/css" href="../asset/dashboard-libs/css/main.css">
-<!--===============================================================================================-->
-</head>
+    <head>
+        <title>Registrasi Aplikasi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- CSS FORM LOAD -->
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../asset/dashboard-libs/vendor/bootstrap/css/bootstrap.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../asset/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../asset/form-vendor/animate/animate.css">
+        <!--===============================================================================================-->	
+            <link rel="stylesheet" type="text/css" href="../asset/form-vendor/css-hamburgers/hamburgers.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../asset/form-vendor/select2/select2.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../asset/css/util-form.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../asset/css/main-form.css">
+        <!--===============================================================================================-->
+        <!-- END CSS FORM -->
+          
+        
+        <!-- NAVIGASI LINK & FONTSTYLE LOAD -->
+        <!--===============================================================================================-->
+        <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Oswald" rel="stylesheet">
+        <!--===============================================================================================-->
+        <link href="fonts/font-style.css" rel="stylesheet">
+        <!--===============================================================================================-->
+        <link href="../asset/css/navigasi.css" rel="stylesheet" type="text/css"/>    
+        <!--===============================================================================================-->
+        <!-- END NAVIGASI LINK & FONTSTYLE -->
+    
+    </head>
 <body>
-	
+    
+    <!--========== NAVBAR ==========-->
+        
+                
+                            <div class="navigasi">
+                                <ul class="navbar">
+                                    <li><a  href="../">Home</a>
+                                    <li><a  href="#">Produk</a>
+                                    <li><a  href="register.php">Daftar</a>
+                                    <li><a  href="login.php">Masuk</a>
+                                </ul>
+                            </div>
+              
+        <!--========== END NAVBAR ==========-->
+    
+    
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
+                
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="../asset/dashboard-libs/images/img-01.png" alt="IMG">
+					<img src="../asset/img/medium/user-register.png" alt="IMG">
 				</div>
 
 				<form class="login100-form validate-form" method="POST" action="">
@@ -99,6 +129,7 @@ include "../control/User.php";
 						</option>
 						
 					   </select>
+                    </div>    
 					
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
@@ -121,30 +152,31 @@ include "../control/User.php";
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
 					</div>
+    
 				</form>
 			</div>
 		</div>
 	</div>
 	
-	
-
-	
+<!-- load js script form -->
 <!--===============================================================================================-->	
-	<script src="../asset/dashboard-libs/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../asset/form-vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="../asset/dashboard-libs/vendor/bootstrap/js/popper.js"></script>
-	<script src="../asset/dashboard-libs/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../asset/form-vendor/bootstrap/js/popper.js"></script>
+	<script src="../asset/form-vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="../asset/dashboard-libs/vendor/select2/select2.min.js"></script>
+	<script src="../asset/form-vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-	<script src="../asset/dashboard-libs/vendor/tilt/tilt.jquery.min.js"></script>
+	<script src="../asset/form-vendor/tilt/tilt.jquery.min.js"></script>
+<!--===============================================================================================-->
 	<script >
 		$('.js-tilt').tilt({
 			scale: 1.1
 		})
 	</script>
 <!--===============================================================================================-->
-	<script src="../asset/dashboard-libs/js/main.js"></script>
-
+	<script src="../asset/dashboard-libs/js/main-form.js"></script>
+<!--===============================================================================================-->
+<!-- end js script form -->
 </body>
 </html>
