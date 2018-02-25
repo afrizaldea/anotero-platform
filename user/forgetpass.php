@@ -4,44 +4,124 @@
 	<head>
 
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta content="width=device-width, initial-scale=1" name="viewport"/>
 		<meta name="description" content="">
 		<meta name="author" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="format-detection" content="telephone=no">
+		<title>Lupa Password</title>
 
-		<title>Forget Password Anotero</title>
-
-		<link href="../asset/css/custom/style-login.css" rel="stylesheet">
-
+        <!-- CSS FORM LOAD -->
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../asset/dashboard-libs/vendor/bootstrap/css/bootstrap.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../asset/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../asset/form-vendor/animate/animate.css">
+        <!--===============================================================================================-->	
+            <link rel="stylesheet" type="text/css" href="../asset/form-vendor/css-hamburgers/hamburgers.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../asset/form-vendor/select2/select2.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../asset/css/util-form.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../asset/css/main-form.css">
+        <!--===============================================================================================-->
+        <!-- END CSS FORM -->
+          
+        
+        <!-- NAVIGASI LINK & FONTSTYLE LOAD -->
+        <!--===============================================================================================-->
+        <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Oswald" rel="stylesheet">
+        <!--===============================================================================================-->
+        <link href="../asset/fonts/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+        <!--===============================================================================================-->
+        <link href="../asset/css/navigasi.css" rel="stylesheet" type="text/css"/>    
+        <!--===============================================================================================-->
+        <!-- END NAVIGASI LINK & FONTSTYLE -->
+        
+        
 	</head>
 
 	<body>
 
-		<ul class="topnav">
-			<div class="kiri">
-  				<li><a href="#about"> ANOTERO </a></li>
-  			</div>
-  			<div class="kanan">
-  				<li class="right"><a href="login.php">Login</a></li>
-  				<li class="right"><a href="../index.php #produk">Layanan</a></li>
-  				<li class="right"><a href="../index.php #about">Tentang</a></li>
-  				<li class="right"><a href="../index.php #home">Home</a></li>
-  			</div>		
-		</ul>
-
-		<div class="form_wrapper">
-			<div class="form_container">
-				<div class="title_container">
-					<h2>LOGIN</h2>
+        <!--========== NAVBAR ==========-->
+        
+                
+                            <div class="navigasi">
+                                <ul class="navbar">
+                                    <li><a  href="../">Home</a>
+                                    <li><a  href="#">Produk</a>
+                                    <li><a  href="register.php">Daftar</a>
+                                    <li><a  href="login.php">Masuk</a>
+                                </ul>
+                            </div>
+              
+        <!--========== END NAVBAR ==========-->
+        
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+                
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="../asset/img/medium/forgetpassword.png" alt="IMG">
 				</div>
-				<form>
-					<div class="input_field"><span><small>Email</small></span>
-						<input type="email" name="email" required=""/>
+
+				<form class="login100-form validate-form" method="POST" action="">
+					<span class="login100-form-title">
+						Lupa Password?
+					</span>
+                    
+					<div class="wrap-input100 validate-input" data-validate = "Format email harus valid, contoh: ex@abc.xyz">
+						<input class="input100" type="email" name="email" placeholder="Ketik email anda">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user-circle" aria-hidden="true"></i>
+						</span>
 					</div>
-					<input class="button" type="submit" value="Minta Password Baru"/>
+
+					
+					<div class="container-login100-form-btn">
+						<button type="submit" class="login100-form-btn">
+							Reset Password
+						</button>
+					</div>
+
+					
+					<div class="text-center p-t-136">
+						<a class="txt2" href="../">
+							Kembali ke menu utama
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+    
 				</form>
 			</div>
 		</div>
+	</div>
 
-
-	</body>
+<!-- load js script form -->
+<!--===============================================================================================-->	
+	<script src="../asset/form-vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../asset/form-vendor/bootstrap/js/popper.js"></script>
+	<script src="../asset/form-vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../asset/form-vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../asset/form-vendor/tilt/tilt.jquery.min.js"></script>
+<!--===============================================================================================-->
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="../asset/dashboard-libs/js/main-form.js"></script>
+<!--===============================================================================================-->
+<!-- end js script form -->
+        
+        
+        
+</body>
 </html>

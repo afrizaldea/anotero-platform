@@ -37,6 +37,7 @@ class User_model{
 
 		$sql = "INSERT INTO `tb_user_profil` (	`id`,`email`, `nama_perusahaan`, `jenis_usaha`, `status`) VALUES (null,'$email',
 		'$nama_perusahaan', '$jenis_usaha', '0')";
+
 		$query	= mysql_query($sql);
 		return $query;
 	}

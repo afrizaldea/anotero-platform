@@ -25,8 +25,7 @@ class User{
 		{
 			$email 					= $_POST['email'];
 			$encpass				= sha1($_POST['password']);
-			$confpass				= sha1($_POST['confirmpassword']);
-			$nama_perusahaan 		= $_POST['nama'];
+			$nama_perusahaan 		= $_POST['nama_perusahaan'];
 			$jenis_usaha 			= $_POST['jenis_usaha'];
 			
 			//menginisialisasi model usder
@@ -37,6 +36,7 @@ class User{
 			
 			//insert profil
 			$new_profil				= $user->register_profil($nama_perusahaan,$jenis_usaha);	
+			
 			if($new_user&&$new_profil)
 			{
 				header("location: http://localhost/anotero-platform/user/login.php");
@@ -90,6 +90,7 @@ class User{
 		    "cap2" => $cap2,
 		    "cap3" => $cap3,
 		);
+		echo $capca['cap3'];
 		return $capca;
 	}
 }
