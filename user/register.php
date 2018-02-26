@@ -2,6 +2,8 @@
 
 include "../control/User.php";
 	$user = new User();
+	$user->vallogin();
+	$user->validasi();
 	$user->register();
     $capca = $user->capca();
 ?>
@@ -96,7 +98,7 @@ include "../control/User.php";
 						</span>
 					</div>
                     <div class="wrap-input100 validate-input" data-validate = "Masukan nama perusahaan anda">
-						<input class="input100" type="text" name="nama_perusahaan" placeholder="Nama perusahaan anda" required>
+						<input class="input100" type="text" name="nama_usaha" placeholder="Nama brand anda" required>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-id-card-o" aria-hidden="true"></i>
@@ -109,8 +111,8 @@ include "../control/User.php";
 						<option class="symbol-input100" value="">
 							Pilih Jenis Usaha
 						</option>
-                            <option class="symbol-input100" value="Toko Baju">
-							Toko Baju
+                            <option class="symbol-input100" value="restoran">
+							Kafetaria / Resto
 						</option>
                             <option class="symbol-input100" value="Apotek">
 							Apotek

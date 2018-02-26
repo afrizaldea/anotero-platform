@@ -18,25 +18,35 @@ class User_model{
 
 	public function register_user($email,$password)
 	{
-		$sql	= "INSERT INTO `tb_user` (`id`, `email`, `password`, `hak_akses`) VALUES (NULL, '$email', '$password' ,'user'
+		$sql	= "INSERT INTO `tb_user` (`id`, `email`, `password`, `hak_akses`) VALUES (NULL, '$email', '$password' ,'manager'
 		)";
 		
 		$query	= mysql_query($sql);
 		return $query;
 	}
-	
-	public function register_profil($nama_perusahaan,$jenis_usaha)
+    
+    public function register_pegawai($email,$password, $hak_akses)
 	{
-		$sql 	= "SELECT email FROM `tb_user` ORDER by id DESC LIMIT 1";
-
+		$sql	= "INSERT INTO `tb_user` (`id`, `email`, `password`, `hak_akses`) VALUES (NULL, '$email', '$password' ,'$hak_akses')";		
 		$query	= mysql_query($sql);
-		while($row = mysql_fetch_array($query))
-		{
-			$email = $row['email'];
-		}
+		return $query;
+	}
+    
+   
+    public function cek_nama_usaha($email)
+    {
+        $sql 	= "SELECT nama_usaha FROM `tb_user_profil` where email='$email'";
+        $query	= mysql_query($sql);
+        while($row = mysql_fetch_array($query)){
+            return $row['nama_usaha'];    
+        }
+		
+    }
+	
+	public function register_profil($email, $nama_usaha, $jenis_usaha)
+	{
 
-		$sql = "INSERT INTO `tb_user_profil` (	`id`,`email`, `nama_perusahaan`, `jenis_usaha`, `status`) VALUES (null,'$email',
-		'$nama_perusahaan', '$jenis_usaha', '0')";
+		$sql = "INSERT INTO `tb_user_profil` (`id`, `email`, `nama_usaha`, `jenis_usaha`, `asal_kota`, `status`, `alamat`) VALUES (NULL, '$email', '$nama_usaha', '$jenis_usaha', NULL, '0', NULL)";
 
 		$query	= mysql_query($sql);
 		return $query;
@@ -93,6 +103,16 @@ class User_model{
 		$hasil_capca= $a + $b;
 	    return $hasil_capca;
 	}
+    
+    public function require_step_($nama_usaha)
+    {
+        $sql = "SELECT count(nama_usaha) as namausaha FROM tb_user_profil where nama_usaha='$nama_usaha'";
+        $query = mysql_query($sql);
+        while($row = mysql_fetch_assoc($query))
+        {
+            return $row['namausaha'];    
+        }    
+    }
 	
 }
 
