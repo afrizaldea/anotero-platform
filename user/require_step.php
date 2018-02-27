@@ -9,7 +9,8 @@
         header("location:dashboard.php");
     }
     $email = $_SESSION['email'];
-
+    $hak_akses = $user->cek_role($email);
+    echo $hak_akses;
 ?>
 
 <!DOCTYPE html>

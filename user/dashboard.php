@@ -7,8 +7,11 @@
     if(isset($_SESSION['requirestep']) && $_SESSION['requirestep'] == 1){
         header("location:require_step.php");
     }
+    
     $email = $_SESSION['email'];
-
+    $hak_akses = $user->cek_role($email);
+    
+     
 ?>
 
 <!DOCTYPE html>
@@ -118,3 +121,4 @@
 <!-- end js script form -->
 </body>
 </html>
+

@@ -7,7 +7,7 @@ File untuk pemodelan objek dari DATABASE USER - tb_user
 */
 
 //pemanggilan fungsi global database sehingga otomatis semua konek
-include_once "../configuration/Database.php"; 
+include_once "$_SERVER[DOCUMENT_ROOT]/anotero-platform/configuration/Database.php"; 
 
 class User_model{
 	
@@ -91,6 +91,16 @@ class User_model{
 		$num_rows = mysql_num_rows($query);
 		return $num_rows;
 	}
+    
+    public function _role($email)
+    {
+        $sql = "Select hak_akses from tb_user where email='$email'";
+		$query = mysql_query($sql);
+        while($row = mysql_fetch_array($query)){
+            return $row['hak_akses'];
+        }
+    }
+    
 	public function capca_register1(){
 	    $cap1 = (rand(0,10));
 		return $cap1;

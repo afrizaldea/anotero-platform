@@ -6,7 +6,7 @@ dari control nanti ambil nilai (return value) yang ada di objek model dari datab
 ##########
 */
 
-include "../model/User_model.php";
+include "$_SERVER[DOCUMENT_ROOT]/anotero-platform/model/User_model.php";
 
 class User{
 	
@@ -85,16 +85,37 @@ class User{
 			$encpass				= sha1($password);
 			$user 					= new User_model();
 				
-			$validasi				= $user->validasi($email,$encpass);	
+			$validasi				= $user->validasi($email,$encpass);
+            $hak_akses              = $user->_role($email);
+            
 			if($validasi==0)
 			{
 				echo "username atau password salah";
-			}else if($validasi==1)
+			}
+            else if($validasi==1 && $hak_akses=="manager")
 			{
 				session_start();
 				$_SESSION['email'] = $_POST['email'];
 				header("location: http://localhost/anotero-platform/user/require_step.php");
 			}
+            else if($validasi==1 && $hak_akses=="kasir")
+            {
+                session_start();
+				$_SESSION['email'] = $_POST['email'];
+				header("location: http://localhost/anotero-platform/apps/restorder.id/pegawai/kasir/");
+            }
+            else if($validasi==1 && $hak_akses=="pelayan")
+            {
+                session_start();
+				$_SESSION['email'] = $_POST['email'];
+				header("location: http://localhost/anotero-platform/apps/restorder.id/pegawai/pelayan/");
+            }
+            else if($validasi==1 && $hak_akses=="supervisor")
+            {
+                session_start();
+				$_SESSION['email'] = $_POST['email'];
+				header("location: http://localhost/anotero-platform/apps/restorder.id/pegawai/supervisor/");
+            }
 		}
 	}
 	
@@ -113,6 +134,7 @@ class User{
 			header("location: http://localhost/anotero-platform/user/require_step.php");
 		}
 	}
+    
 	public function capca(){
 	    $capcay = new User_model();
 		$cap1 = $capcay->capca_register1();
@@ -137,7 +159,13 @@ class User{
         }else{
             $_SESSION['requirestep'] = 0;
         }
-    } 
+    }
+    
+    public function cek_role($email)
+    {
+        $user = new User_model();
+        return $user->_role($email);
+    }
     
 }
 
