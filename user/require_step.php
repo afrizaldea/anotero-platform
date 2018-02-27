@@ -4,19 +4,21 @@
 	$user->valhalaman();
     $user->register_pegawai();
     $_SESSION['nama_usaha'] = $user->cek_nama_usaha();
+    $hak_akses = $_SESSION['hak_akses'];
     $user->require_step();
-    if(isset($_SESSION['requirestep']) && $_SESSION['requirestep'] == 0){
+    if(isset($_SESSION['requirestep']) && $_SESSION['requirestep'] == 0 && $hak_akses=="manager"){
         header("location:dashboard.php");
+    }else if($hak_akses != "manager"){
+        header("location:http://localhost/anotero-platform/apps/restorder.id/pegawai/$hak_akses/");
     }
     $email = $_SESSION['email'];
-    $hak_akses = $user->cek_role($email);
-    echo $hak_akses;
+    
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Registrasi Aplikasi</title>
+        <title><?php echo $hak_akses ?></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         

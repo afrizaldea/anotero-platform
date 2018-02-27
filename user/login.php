@@ -9,6 +9,7 @@
 	$user = new User();
 	$user->vallogin();
 	$user->validasi();
+    
 	//proses teknikal selesai
 ?>
 

@@ -1,15 +1,21 @@
 ﻿<?php
-	include "../control/User.php";
+	include "$_SERVER[DOCUMENT_ROOT]/anotero-platform/control/User.php";
 	$user = new User();
 	$user->valhalaman();
+    $email = $_SESSION['email'];
+    $hak_akses = $_SESSION['hak_akses'];
+    if($hak_akses != "manager"){
+        header("location:../");
+    }
     $_SESSION['nama_usaha'] = $user->cek_nama_usaha();
     $user->require_step();
-    if(isset($_SESSION['requirestep']) && $_SESSION['requirestep'] == 1){
+    if(isset($_SESSION['requirestep']) && $_SESSION['requirestep'] == 1 && $hak_akses == "manager"){
         header("location:require_step.php");
     }
+    else if($hak_akses != "manager"){
+        header("location:http://localhost/anotero-platform/apps/restorder.id/pegawai/$hak_akses/");
+    }
     
-    $email = $_SESSION['email'];
-    $hak_akses = $user->cek_role($email);
     
      
 ?>
@@ -17,7 +23,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Registrasi Aplikasi</title>
+        <title><?php echo $hak_akses ?></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         

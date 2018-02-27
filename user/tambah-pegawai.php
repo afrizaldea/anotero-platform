@@ -5,7 +5,14 @@
     $user->register_pegawai();
     $_SESSION['nama_usaha'] = $user->cek_nama_usaha();
     $email = $_SESSION['email'];
-
+    $user->require_step();
+    $hak_akses = $_SESSION['hak_akses'];
+    if(isset($_SESSION['requirestep']) && $_SESSION['requirestep'] == 1 && $hak_akses=="manager"){
+        header("location:require_step.php");
+    }
+    else if($hak_akses != "manager"){
+        header("location:http://localhost/anotero-platform/apps/restorder.id/pegawai/$hak_akses/");
+    }
 ?>
 
 <!DOCTYPE html>

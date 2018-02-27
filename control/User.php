@@ -96,24 +96,28 @@ class User{
 			{
 				session_start();
 				$_SESSION['email'] = $_POST['email'];
+                $_SESSION['hak_akses'] = $hak_akses;
 				header("location: http://localhost/anotero-platform/user/require_step.php");
 			}
             else if($validasi==1 && $hak_akses=="kasir")
             {
                 session_start();
 				$_SESSION['email'] = $_POST['email'];
+                $_SESSION['hak_akses'] = $hak_akses;
 				header("location: http://localhost/anotero-platform/apps/restorder.id/pegawai/kasir/");
             }
             else if($validasi==1 && $hak_akses=="pelayan")
             {
                 session_start();
 				$_SESSION['email'] = $_POST['email'];
+                $_SESSION['hak_akses'] = $hak_akses;
 				header("location: http://localhost/anotero-platform/apps/restorder.id/pegawai/pelayan/");
             }
             else if($validasi==1 && $hak_akses=="supervisor")
             {
                 session_start();
 				$_SESSION['email'] = $_POST['email'];
+                $_SESSION['hak_akses'] = $hak_akses;
 				header("location: http://localhost/anotero-platform/apps/restorder.id/pegawai/supervisor/");
             }
 		}

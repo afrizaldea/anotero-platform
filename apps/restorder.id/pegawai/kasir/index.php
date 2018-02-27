@@ -5,7 +5,7 @@
     $email = $_SESSION['email'];
     $hak_akses = $user->cek_role($email);
     if($hak_akses != "kasir"){
-        header("location: http://localhost/anotero-platform/user/login.php");
+        header("location:http://localhost/anotero-platform/login.php");
     }
 ?>
 
