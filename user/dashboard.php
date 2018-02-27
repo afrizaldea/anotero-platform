@@ -13,7 +13,9 @@
         header("location:require_step.php");
     }
     else if($hak_akses != "manager"){
-        header("location:http://localhost/anotero-platform/apps/restorder.id/pegawai/$hak_akses/");
+        header("location:http://localhost/anotero-platform/apps/restorder.id/pegawai/$hak_akses");
+    }else if($hak_akses==""){
+        header("location:http://localhost/anotero-platform/user/login.php");
     }
     
     

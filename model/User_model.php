@@ -77,12 +77,19 @@ class User_model{
 		return $query;
 	}
 
-	public function select($id)
+	public function lihat_data_pegawai($nama_usaha)
 	{
-		$sql = "Select * from tb_user where id='$id'";
+		$sql = "SELECT * FROM `tb_user_profil` where nama_usaha='$nama_usaha'";
 		$query = mysql_query($sql);
 		return $query;
 	}
+    
+    public function pegawaiby($data,$email)
+    {
+        $sql = "SELECT $data FROM `tb_user` where email='$email'";
+		$query = mysql_query($sql);
+        return $query;
+    }
 	
 	public function validasi($email, $pass)
 	{

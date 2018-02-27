@@ -170,6 +170,16 @@ class User{
         $user = new User_model();
         return $user->_role($email);
     }
+    public function lihatpegawai($nama_usaha)
+    {
+        $user = new User_model();
+        return $user->lihat_data_pegawai($nama_usaha);
+    }
+    public function cek_divisi($data,$email)
+    {
+        $user = new User_model();
+        return $user->pegawaiby($data,$email);
+    }
     
 }
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2018 at 07:21 PM
+-- Generation Time: Feb 28, 2018 at 12:03 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -42,7 +42,13 @@ CREATE TABLE `tb_user` (
 INSERT INTO `tb_user` (`id`, `email`, `password`, `hak_akses`) VALUES
 (42, 'manajer@kopianjis.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'manager'),
 (43, 'deas@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'kasir'),
-(44, 'manajer@admourcafe.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'manager');
+(44, 'manajer@admourcafe.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'manager'),
+(45, 'manajer@deacafe.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'manager'),
+(46, 'budi@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'supervisor'),
+(47, 'aldi@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'supervisor'),
+(48, 'ega@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'kasir'),
+(49, 'manajer@tedicafe.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'manager'),
+(50, 'kasir1@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'kasir');
 
 -- --------------------------------------------------------
 
@@ -67,7 +73,13 @@ CREATE TABLE `tb_user_profil` (
 INSERT INTO `tb_user_profil` (`id`, `email`, `nama_usaha`, `jenis_usaha`, `asal_kota`, `status`, `alamat`) VALUES
 (22, 'manajer@kopianjis.com', 'Kopi Anjis', 'restoran', NULL, '0', NULL),
 (23, 'deas@gmail.com', 'Kopi Anjis', '', NULL, '0', NULL),
-(24, 'manajer@admourcafe.com', 'Armour Cafe', 'restoran', NULL, '0', NULL);
+(24, 'manajer@admourcafe.com', 'Armour Cafe', 'restoran', NULL, '0', NULL),
+(25, 'manajer@deacafe.com', 'Dea Cafe', 'restoran', NULL, '0', NULL),
+(26, 'budi@gmail.com', 'Dea Cafe', '', NULL, '0', NULL),
+(27, 'aldi@gmail.com', 'Dea Cafe', '', NULL, '0', NULL),
+(28, 'ega@gmail.com', 'Dea Cafe', '', NULL, '0', NULL),
+(29, 'manajer@tedicafe.com', 'Teday Cafe', 'restoran', NULL, '0', NULL),
+(30, 'kasir1@gmail.com', 'Teday Cafe', '', NULL, '0', NULL);
 
 --
 -- Indexes for dumped tables
@@ -93,13 +105,13 @@ ALTER TABLE `tb_user_profil`
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `tb_user_profil`
 --
 ALTER TABLE `tb_user_profil`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
