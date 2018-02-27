@@ -58,8 +58,7 @@
                                     <li><a  href="dashboard.php"><?php echo $email ?></a>
                                     <li><a  href="laporan-keuangan.php">Laporan Keuangan</a>
                                     <li><a  href="statistik-pegawai.php">Statistik Kinerja Pegawai</a>
-                                    <li><a  href="logout.php">Keluar</a>
-                                       
+                                    <li><a  href="logout.php">Keluar</a> 
                                 </ul>
                             </div>
               
@@ -67,17 +66,40 @@
     <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-                <div class="login100-pic js-tilt" style="margin: 0 auto;" data-tilt>
-					<img src="../asset/img/medium/dashboard-manager.png" alt="IMG">
+            
+            
+                
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="../asset/img/medium/search.png" alt="IMG">
 				</div>
+                <form class="login100-form validate-form" method="POST" action="">
+					<span class="login100-form-title">
+						Cari Data Pegawai
+					</span>
+                    
+					<div class="wrap-input100 validate-input" data-validate = "Format email harus valid, contoh: ex@abc.xyz">
+						<input class="input100" type="text" name="q" placeholder="cari berdasarkan nama">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user-circle" aria-hidden="true"></i>
+						</span>
+					</div>
+                        <div class="container-login100-form-btn">
+						<button type="submit" class="login100-form-btn">
+							Cari Data
+						</button>
+					</div>
+                </form> 
+            
+                <div class="container-login100-form-btn"></div>        
+                <hr/>
+                
                 <div class="container-login100-form-btn">
-						<a href="">
-                            <button type="submit" class="login100-form-btn">
-							INI BAGIAN UTK KELOLA PEGAWAI
-						    </button>
-                        </a>
+						<a href="">Tambahkan Pegawai Baru</a> 
+                            &nbsp;&nbsp;||&nbsp;&nbsp;
+                        <a href="">Lihat Semua Data Pegawai</a>   
 				</div>
-                 
+                
             </div>
         </div>
     </div>
