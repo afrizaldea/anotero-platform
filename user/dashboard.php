@@ -55,16 +55,45 @@
                 
                             <div class="navigasi">
                                 <ul class="navbar">
-                                    <li><a  href="../"><?php echo $email ?></a>
-                                    <li><a  href="#">Produk</a>
-                                    <li><a  href="register.php">Daftar</a>
-                                    <li><a  href="login.php">Masuk</a>
+                                    <li><a  href="#"><?php echo $email ?></a>
+                                    <li><a  href="mode-pelanggan.php">Mode Pelanggan</a>
+                                    <li><a  href="pengaturan.php">Pengaturan</a>
+                                    <li><a  href="logout.php">Keluar</a>
                                        
                                 </ul>
                             </div>
               
         <!--========== END NAVBAR ==========-->
-    
+    <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+                <div class="login100-pic js-tilt" style="margin: 0 auto;" data-tilt>
+					<img src="../asset/img/medium/dashboard-manager.png" alt="IMG">
+				</div>
+                <div class="container-login100-form-btn">
+						<a href="kelola-pegawai.php">
+                            <button type="submit" class="login100-form-btn">
+							Kelola Data Pegawai
+						    </button>
+                        </a>
+				</div>
+                 <div class="container-login100-form-btn">
+						<a href="statistik-pegawai.php">
+                            <button type="submit" class="login100-form-btn">
+							Statistik Kinerja Pegawai
+						    </button>
+                        </a>
+				</div>
+                 <div class="container-login100-form-btn">
+						<a href="laporan-keuangan.php">
+                            <button type="submit" class="login100-form-btn">
+							Laporan Keuangan
+						    </button>
+                        </a>
+				</div>
+            </div>
+        </div>
+    </div>
     
 	
 <!-- load js script form -->

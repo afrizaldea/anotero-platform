@@ -1,12 +1,11 @@
-﻿<?php
+<?php
 	include "../control/User.php";
 	$user = new User();
 	$user->valhalaman();
-    $user->register_pegawai();
     $_SESSION['nama_usaha'] = $user->cek_nama_usaha();
     $user->require_step();
-    if(isset($_SESSION['requirestep']) && $_SESSION['requirestep'] == 0){
-        header("location:dashboard.php");
+    if(isset($_SESSION['requirestep']) && $_SESSION['requirestep'] == 1){
+        header("location:require_step.php");
     }
     $email = $_SESSION['email'];
 
@@ -15,7 +14,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Registrasi Aplikasi</title>
+        <title>Manager - Kelola Pegawai</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -54,83 +53,34 @@
     <!--========== NAVBAR ==========-->
         
                 
-                            <div class="navigasi">
+                               <div class="navigasi">
                                 <ul class="navbar">
-                                    <li><a  href="#"><?php echo $email ?></a>
-                                    <li><a  href="#">Panduan Pengguna</a>
-                                    <li><a  href="pengaturan.php">Pengaturan</a>
-                                    <li><a  href="logout.php">Keluar</a>
-                                       
+                                    <li><a  href="dashboard.php"><?php echo $email ?></a>
+                                    <li><a  href="kelola-pegawai.php">Kelola Data Pegawai</a>
+                                    <li><a  href="statistik-pegawai.php">Statistik Kinerja Pegawai</a>
+                                    <li><a  href="logout.php">Keluar</a> 
                                 </ul>
                             </div>
               
         <!--========== END NAVBAR ==========-->
-    
-        <!--========== FORM ==========-->
-	<div class="limiter">
+    <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-                
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="../asset/img/medium/user-register.png" alt="IMG">
+                <div class="login100-pic js-tilt" style="margin: 0 auto;" data-tilt>
+					<img src="../asset/img/medium/dashboard-manager.png" alt="IMG">
 				</div>
-
-				<form class="login100-form validate-form" method="GET" action="" onsubmit="return validasi_pass(this)">
-					<span class="login100-form-title">
-						<small>Hmmm...Nampaknya Anda belum menambahkan pegawai :(</small><br/><hr/>
-                        Silahkan tambahkan setidaknya 1 pegawai
-					</span>
-                    
-                    
-                    <input type="text" name="nama_usaha" value="<?php echo $user->cek_nama_usaha(); ?>" hidden>
-					<div class="wrap-input100 validate-input" data-validate = "Format email harus valid, contoh: ex@abc.xyz">
-						<input class="input100" type="email" name="email" placeholder="Email" required>
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-user-circle" aria-hidden="true"></i>
-						</span>
-					</div>
-                    
-
-					<div class="wrap-input100 validate-input" data-validate = "Kata sandi harus di inputkan">
-						<input class="input100" type="password" name="password" placeholder="Kata sandi" required>
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
-                    
-                    <div class="wrap-input100 validate-input" data-validate = "hak akses">
-						<select class="input100" type="text" name="hak_akses" required>
-						<span class="focus-input100"></span>
-						<option class="symbol-input100" value="">
-							Pilih Bagian / Divisi
-						</option>
-                            <option class="symbol-input100" value="supervisor">
-							Supervisor
-						</option>
-                            <option class="symbol-input100" value="kasir">
-							Kasir
-						</option>
-						    <option class="symbol-input100" value="pelayan">
-							Pelayan
-						</option>
-					   </select>
-                    </div>
-                    
-			            <br/>					
-					
-					<div class="container-login100-form-btn">
-						<button type="submit" class="login100-form-btn">
-							Daftarkan Pegawai
-						</button>
-					</div>
+                <div class="container-login100-form-btn">
+						<a href="">
+                            <button type="submit" class="login100-form-btn">
+							INI BAGIAN UTK LAPORAN KEUANGAN
+						    </button>
+                        </a>
+				</div>
+                 
+            </div>
+        </div>
+    </div>
     
-				</form>
-				<!--========== END FORM ==========-->
-			</div>
-		</div>
-	</div>
 	
 <!-- load js script form -->
 <!--===============================================================================================-->	
