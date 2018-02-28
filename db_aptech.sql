@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2018 at 04:44 AM
+-- Generation Time: Feb 28, 2018 at 04:49 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -35,7 +35,7 @@ CREATE TABLE `tb_menu` (
   `nama_menu` varchar(255) NOT NULL,
   `harga` double NOT NULL,
   `jenis` varchar(255) NOT NULL,
-  `sub_jenis` int(11) DEFAULT NULL,
+  `sub_jenis` varchar(255) DEFAULT NULL,
   `deskripsi` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL,
   `gambar` blob NOT NULL
