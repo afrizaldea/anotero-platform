@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2018 at 12:03 AM
+-- Generation Time: Feb 28, 2018 at 04:44 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -25,6 +25,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_menu`
+--
+
+CREATE TABLE `tb_menu` (
+  `id` int(11) NOT NULL,
+  `nama_usaha` varchar(255) NOT NULL,
+  `kode_menu` char(255) NOT NULL,
+  `nama_menu` varchar(255) NOT NULL,
+  `harga` double NOT NULL,
+  `jenis` varchar(255) NOT NULL,
+  `sub_jenis` int(11) DEFAULT NULL,
+  `deskripsi` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL,
+  `gambar` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_user`
 --
 
@@ -40,15 +59,9 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id`, `email`, `password`, `hak_akses`) VALUES
-(42, 'manajer@kopianjis.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'manager'),
-(43, 'deas@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'kasir'),
-(44, 'manajer@admourcafe.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'manager'),
-(45, 'manajer@deacafe.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'manager'),
-(46, 'budi@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'supervisor'),
-(47, 'aldi@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'supervisor'),
-(48, 'ega@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'kasir'),
-(49, 'manajer@tedicafe.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'manager'),
-(50, 'kasir1@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'kasir');
+(58, 'juheri842@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'manager'),
+(59, 'test@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'supervisor'),
+(60, 'naon@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'manager');
 
 -- --------------------------------------------------------
 
@@ -71,19 +84,19 @@ CREATE TABLE `tb_user_profil` (
 --
 
 INSERT INTO `tb_user_profil` (`id`, `email`, `nama_usaha`, `jenis_usaha`, `asal_kota`, `status`, `alamat`) VALUES
-(22, 'manajer@kopianjis.com', 'Kopi Anjis', 'restoran', NULL, '0', NULL),
-(23, 'deas@gmail.com', 'Kopi Anjis', '', NULL, '0', NULL),
-(24, 'manajer@admourcafe.com', 'Armour Cafe', 'restoran', NULL, '0', NULL),
-(25, 'manajer@deacafe.com', 'Dea Cafe', 'restoran', NULL, '0', NULL),
-(26, 'budi@gmail.com', 'Dea Cafe', '', NULL, '0', NULL),
-(27, 'aldi@gmail.com', 'Dea Cafe', '', NULL, '0', NULL),
-(28, 'ega@gmail.com', 'Dea Cafe', '', NULL, '0', NULL),
-(29, 'manajer@tedicafe.com', 'Teday Cafe', 'restoran', NULL, '0', NULL),
-(30, 'kasir1@gmail.com', 'Teday Cafe', '', NULL, '0', NULL);
+(38, 'juheri842@gmail.com', 'restoran', 'restoran', NULL, '0', NULL),
+(39, 'test@gmail.com', 'restoran', '', NULL, '0', NULL),
+(40, 'naon@gmail.com', 'restoran', 'restoran', NULL, '0', NULL);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `tb_menu`
+--
+ALTER TABLE `tb_menu`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tb_user`
@@ -102,16 +115,22 @@ ALTER TABLE `tb_user_profil`
 --
 
 --
+-- AUTO_INCREMENT for table `tb_menu`
+--
+ALTER TABLE `tb_menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `tb_user_profil`
 --
 ALTER TABLE `tb_user_profil`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
