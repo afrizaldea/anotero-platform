@@ -86,9 +86,10 @@ class User_model{
     
     public function pegawaiby($data,$email)
     {
-        $sql = "SELECT $data FROM `tb_user` where email='$email'";
+		$sql = "SELECT $data FROM `tb_user` where email='$email'";
 		$query = mysql_query($sql);
         return $query;
+
     }
 	
 	public function validasi($email, $pass)
@@ -130,6 +131,13 @@ class User_model{
             return $row['namausaha'];    
         }    
     }
+	
+	public function lihat_nama_usaha($nama_usaha){
+		$sql = "Select * from tb_user_profil where nama_usaha='$nama_usaha'";
+		$query = mysql_query($sql);
+		$num_rows = mysql_num_rows($query);
+		return $num_rows;
+	}
 	
 }
 

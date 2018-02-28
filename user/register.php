@@ -4,7 +4,7 @@ include "../control/User.php";
 	$user = new User();
 	$user->vallogin();
 	$user->validasi();
-	$user->register();
+	$msg = $user->register();
     $capca = $user->capca();
 ?>
 <!DOCTYPE html>

@@ -30,16 +30,23 @@ class User{
 			//menginisialisasi model usder
 			$user 					= new User_model();
 			
-			//insert user
-			$new_user				= $user->register_user($email,$encpass);	
+			//validasi untuk melihat nama usaha yang sama
+			$valusaha = $user->lihat_nama_usaha($nama_usaha);			
 			
-			//insert profil
-			$new_profil				= $user->register_profil($email, $nama_usaha,$jenis_usaha);	
-			
-			if($new_user&&$new_profil)
-			{
-                
-				header("location: http://localhost/anotero-platform/user/login.php");
+			if($valusaha==0){
+				//insert user
+				$new_user				= $user->register_user($email,$encpass);	
+				
+				//insert profil
+				$new_profil				= $user->register_profil($email, $nama_usaha,$jenis_usaha);	
+				
+				if($new_user&&$new_profil)
+				{			
+					header("location: http://localhost/anotero-platform/user/login.php");
+				}
+			}else{
+				$msg = "nama usaha telah dipakai";
+				return $msg;
 			}
 		}
 	}
@@ -54,14 +61,13 @@ class User{
 			$nama_usaha             = $_GET['nama_usaha'];
             
 			$user = new User_model();
-            $new_user				= $user->register_pegawai($email,$encpass,$hak_akses);	
+            $new_user				= $user->register_pegawai($email,$encpass,$hak_akses);				
 			
 			//insert profil
 			$new_profil				= $user->register_profil($email, $nama_usaha, null);	
 			
 			if($new_user&&$new_profil)
-			{
-                
+			{  
 				header("location: http://localhost/anotero-platform/user/dashboard.php");
 			}
 		}
