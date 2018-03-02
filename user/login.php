@@ -41,6 +41,7 @@
             <link rel="stylesheet" type="text/css" href="../asset/css/util-form.css">
         <!--===============================================================================================-->
             <link rel="stylesheet" type="text/css" href="../asset/css/main-form.css">
+            <link rel="stylesheet" type="text/css" href="../asset/css/login.css">
         <!--===============================================================================================-->
         <!-- END CSS FORM -->
           
@@ -70,10 +71,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-                
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="../asset/img/medium/user-login.png" alt="IMG">
-				</div>
+			
 
 				<form class="login100-form validate-form" method="POST" action="">
 					<span class="login100-form-title">
@@ -123,12 +121,13 @@
 					</div>
 					<div class="text-center p-t-136">
 						<a class="txt2" href="#">
-							Masuk dengan Gmail
+							Masuk dengan akun Google
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
 					</div>
     
 				</form>
+			
 			</div>
 		</div>
 	</div>
